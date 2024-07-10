@@ -1,0 +1,59 @@
+
+/* ***********header style *********** */
+header{
+    background-color: rgb(238,238,238);
+    height: 5rem;
+}
+
+.title-bar{
+    height: 50%;
+    display: flex;
+    gap: 0.3rem;
+    margin-left: 0.5rem;
+    align-items: center;
+
+    
+}
+.menu-bar{
+    height: 50%;
+    display: flex;
+    gap: 1rem;
+    margin-left: 0.5rem;
+    align-items: center;
+    
+    
+}
+
+.vlc-img{
+    height: 70%;
+
+}
+.title{
+    font-size: 1rem;
+}
+.menu{
+    position: relative;
+}
+.menu-item{
+    background-color: rgb(238,238,238);
+    position: absolute;
+    top: 13px;
+    width: 8rem;
+}
+
+
+/* *******main ******** */
+
+main{
+    background-color: black;
+    height: calc(100vh - 8.5rem);
+
+
+}
+
+
+/* *********footer ************* */
+footer{
+    height: 3.5rem;
+    background-color: rgb(238,238,238);
+}
