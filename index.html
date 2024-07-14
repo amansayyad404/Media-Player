@@ -3,37 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VLC</title>
+    <title>mediaPlayer</title>
+    <link rel="icon" type="image/x-icon" href="./logopng.PNG">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <div class="title-bar"> 
-            <img src="./vlc.png" alt="vlc-icon" class="vlc-img">
-            <h1 class="title">VLC media Player</h1>
+           <img src="./logopng.PNG" class="app-img" alt="appImg">
+            <h1 class="title">mediaPlayer </h1>
         </div>
         <div class="menu-bar">
             <div class="menu">
-                <div class="menu-btn">Open</div>
+                <div class="menu-btn" id="open-btn">Open</div>
+                <input type="file" class="video-input">
             </div>
             <div class="menu">
+                
                 <div class="menu-btn">Playback</div>
-                <!-- <ul class="menu-item">
-                    <li>Speed Up</li>
-                    <li>Speed Down</li>
-                </ul> -->
-            </div>
-            <div class="menu">
-                <div class="menu-btn">Audio</div>
                 <ul class="menu-item">
-                    <li>Volume Up</li>
-                    <li>Volume Down</li>
+                    <li id="speedUp">Speed Up</li>
+                    <li id="speendDown">Speed Down</li>
                 </ul>
             </div>
+            
         </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <main id="main" onclick="playPause()">
+        <img src="./logopng.PNG" alt="" class="mainlogo">
+    </main>
+    <div class="toast"></div>
+    <footer>
+        <div class="footDiv">
+            <div class="play-paus">
+                <div class="playDiv">
+                    <i class="fa-solid fa-play" id="play"></i>
+                </div>
+                <div class="pause">
+                    <i class="fa-solid fa-pause" id="pause"></i>
+                </div>
+            </div>
+            
+            <div class="video-timer">
+                <p class="current-time txt">00:00</p>
+                <p class="separator txt">/</p>
+                <p class="video-duration txt">00:00</p>
+            </div>
+            <div class="video-timeline">
+                <div class="progress-area">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            
+            
+            <div class="volumeRange">
+                <i class="fa-solid fa-volume-high" id="unmute"></i>
+                <i class="fa-solid fa-volume-xmark " id="mute"></i>
+                <input type="range" value="70" step="10" id="rangevolume">
+            </div>
+            <div class="pip">
+                <img src="./pip.png"  class="pip">
+            </div>
+            <div class="fullScreen">
+                <i class="fa-solid fa-expand" id="fullscreen"></i>
+            </div>
+        </div>
+       
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html> 

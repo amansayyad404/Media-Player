@@ -24,7 +24,7 @@ header{
     
 }
 
-.vlc-img{
+.app-img{
     height: 70%;
 
 }
@@ -33,12 +33,36 @@ header{
 }
 .menu{
     position: relative;
+    border-radius: 5px;
+   
+    cursor: pointer;
+    padding: 2px;
+}
+
+
+.menu:hover{
+    background-color: lightblue;
 }
 .menu-item{
     background-color: rgb(238,238,238);
     position: absolute;
-    top: 13px;
-    width: 8rem;
+    top: -30px;
+    left: 50px;
+    width: 9rem;
+    display: none;
+}
+.menu:hover .menu-item{
+    display: block;
+}
+li{
+    cursor: pointer;
+    
+}
+li:hover{
+    background-color: rgb(186, 230, 245);
+}
+.video-input{
+    display: none;
 }
 
 
@@ -46,14 +70,107 @@ header{
 
 main{
     background-color: black;
-    height: calc(100vh - 8.5rem);
-
+    height: calc(100vh - 8rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
-
+.mainlogo{
+    height: 13rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+.video{
+    height: 100%;
+    width: 100%;
+}
+ /* toast  */
+ .toast{
+    color: white;
+    font-size: 2rem;
+    position: fixed;
+    top: 100px;
+    right: 40px;
+    display: none;
+ }
 
 /* *********footer ************* */
 footer{
     height: 3.5rem;
     background-color: rgb(238,238,238);
+   
+    
+}
+.video-timer{
+width: 6rem;
+height: 100%;
+display: flex;
+}
+.txt{
+    color: black;
+}
+.video-timeline{
+    width: 100%;
+
+}
+.progress-area{
+    width: 100%;
+    height: 3px;
+    background-color: rgba(0, 1, 1);
+    cursor: pointer;
+}
+.progress-bar{
+    width: 0%;
+    height: 100%;
+    background-color:#2289ff;
+    cursor: pointer;
+}
+
+.pip{
+    height: 1.2rem;
+    cursor: pointer;
+}
+
+#mute{
+    display: none;
+    
+}
+#mute,#unmute{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.footDiv{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap:1rem
+
+    
+    
+}
+.volumeRange{
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    
+}
+#fullscreen{
+    font-size: 1.2rem;
+    margin-right: 4px;
+    cursor: pointer;
+}
+#play{
+    
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 7px;
+}
+#pause{
+  display: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 7px;
 }
